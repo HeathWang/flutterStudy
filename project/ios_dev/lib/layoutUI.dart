@@ -97,4 +97,17 @@ class CustomDemoPage extends StatelessWidget {
   }
 }
 
+class ImageTestPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      appBar: AppBar(title: Text('Image Resource')),
+      body: Center(
+        child: Image(image: AssetImage('images/demo_620X620.jpg')),
+      ),
+    );
+  }
+}
+
 

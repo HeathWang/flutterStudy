@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'updateUI.dart';
 import 'layoutUI.dart';
 import 'animation.dart';
+import 'threadTest.dart';
 
 void main() {
   runApp(MainPage());
@@ -23,7 +24,9 @@ class MainPageState extends State<MainPage> {
     'How do I lay out my widgets? Where is my Storyboard?',
     'How to Remove UI?',
     'How to Animate?',
-    'How do I build custom widgets?'
+    'How do I build custom widgets?',
+    'How do I write asynchronous code?',
+    'How do I include image assets for Flutter?',
   ];
 
   @override
@@ -38,6 +41,8 @@ class MainPageState extends State<MainPage> {
         ),
         body: _buildList(context),
       ),
+      routes: <String, WidgetBuilder>{
+      },
     );
 
   }
@@ -75,6 +80,14 @@ class MainPageState extends State<MainPage> {
                 break;
               case 4:
                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => CustomDemoPage()));
+                break;
+              case 5:
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ThreadPage()));
+                break;
+              case 6:
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => ImageTestPage()));
                 break;
             }
           },
