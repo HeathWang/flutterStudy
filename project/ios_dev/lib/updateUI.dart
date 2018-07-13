@@ -109,6 +109,7 @@ class MyFormTestPage extends StatefulWidget {
 class _MyFormTestPageState extends State<MyFormTestPage> {
 
   final textController = TextEditingController();
+  String errorText;
 
   @override
   Widget build(BuildContext context) {
@@ -118,9 +119,20 @@ class _MyFormTestPageState extends State<MyFormTestPage> {
         padding: const EdgeInsets.all(10.0),
         child: TextField(
           controller: textController,
-          decoration: InputDecoration(hintText: 'Please input something.',
-              labelText: 'This is placeholder'
+          decoration: InputDecoration(
+            hintText: 'Please input something.',
+            labelText: 'This is placeholder',
+            errorText: errorText,
           ),
+          onSubmitted: (text) {
+            setState(() {
+              if (isEmail(text)) {
+                errorText = null;
+              } else {
+                errorText = 'Error: This is NOT an Email';
+              }
+            });
+          },
         ),
       ),
       floatingActionButton: FloatingActionButton(
@@ -142,6 +154,16 @@ class _MyFormTestPageState extends State<MyFormTestPage> {
   void dispose() {
     textController.dispose();
     super.dispose();
+  }
+
+  // validate email
+  bool isEmail(String em) {
+    String emailRegexp =
+        r'^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$';
+
+    RegExp regExp = RegExp(emailRegexp);
+
+    return regExp.hasMatch(em);
   }
 
 }
