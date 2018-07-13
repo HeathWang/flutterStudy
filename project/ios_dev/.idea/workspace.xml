@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="016c2386-d8dc-4cc4-8f25-05627528af9b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/layoutUI.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/layoutUI.dart" afterDir="false" />
-    </list>
+    <list default="true" id="016c2386-d8dc-4cc4-8f25-05627528af9b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
     <ignored path="$PROJECT_DIR$/.pub/" />
@@ -45,8 +42,8 @@
       <file leaf-file-name="layoutUI.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/layoutUI.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            <state relative-caret-position="408">
+              <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -262,7 +259,7 @@
       <workItem from="1531376667639" duration="122000" />
       <workItem from="1531377135481" duration="48000" />
       <workItem from="1531378787861" duration="429000" />
-      <workItem from="1531382602017" duration="12245000" />
+      <workItem from="1531382602017" duration="12496000" />
     </task>
     <task id="LOCAL-00001" summary="add thread demo&#10;add image demo">
       <created>1531388909829</created>
@@ -292,11 +289,18 @@
       <option name="project" value="LOCAL" />
       <updated>1531449612145</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update layout ui">
+      <created>1531453398773</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1531453398773</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27164000" />
+    <option name="totallyTimeSpent" value="27415000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="37" width="1050" height="810" extended-state="0" />
@@ -384,7 +388,8 @@
     <MESSAGE value="add 'update listView dynamic' demo&#10;add gesture demo" />
     <MESSAGE value="add textfield demo" />
     <MESSAGE value="validate textfiled and show error." />
-    <option name="LAST_COMMIT_MESSAGE" value="validate textfiled and show error." />
+    <MESSAGE value="Update layout ui" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update layout ui" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -636,8 +641,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/layoutUI.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        <state relative-caret-position="408">
+          <caret line="24" column="21" lean-forward="true" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
