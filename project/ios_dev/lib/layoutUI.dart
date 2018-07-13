@@ -1,23 +1,63 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 
+class MyAppBar extends StatelessWidget {
+
+  MyAppBar({this.title});
+
+  final Widget title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 56.0,
+      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+      decoration: BoxDecoration(color: Colors.blue[500]),
+      child: Row(
+        children: <Widget>[
+          IconButton(
+            icon: Icon(Icons.menu),
+            onPressed: null,
+          ),
+          Expanded(
+            child: title,
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: null,
+          ),
+        ],
+      ),
+    );
+  }
+
+
+}
+
 class LayoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Layout Demo'),
-        backgroundColor: Colors.pink,
-      ),
-      body: Center(
-        child: CupertinoButton(
-          child: Text('Button'),
-          onPressed: () {},
-          borderRadius: const BorderRadius.all(const Radius.circular(3.0)),
-          color: Colors.red,
-          minSize: 30.0,
-          padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 10.0),
-        ),
+    return Material(
+      child: Column(
+        children: <Widget>[
+          MyAppBar(
+            title: Text('Example title', textAlign: TextAlign.center,
+                style: TextStyle(color: Colors.white)),
+          ),
+          Expanded(
+            child: Center(
+              child: CupertinoButton(
+                child: Text('Button'),
+                onPressed: () {},
+                borderRadius: const BorderRadius.all(
+                    const Radius.circular(3.0)),
+                color: Colors.red,
+                minSize: 30.0,
+                padding: EdgeInsets.fromLTRB(30.0, 10.0, 30.0, 10.0),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

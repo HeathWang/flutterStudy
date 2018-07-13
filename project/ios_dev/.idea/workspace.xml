@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="016c2386-d8dc-4cc4-8f25-05627528af9b" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/animation.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/animation.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/updateUI.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/updateUI.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/layoutUI.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/layoutUI.dart" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.dart_tool/" />
     <ignored path="$PROJECT_DIR$/.idea/" />
@@ -23,8 +21,8 @@
       <file leaf-file-name="main.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="111" column="6" lean-forward="true" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="6" />
+            <state relative-caret-position="282">
+              <caret line="75" column="83" selection-start-line="75" selection-start-column="83" selection-end-line="75" selection-end-column="83" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -44,11 +42,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layoutUI.dart" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layoutUI.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/layoutUI.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="106" column="63" selection-start-line="106" selection-start-column="63" selection-end-line="106" selection-end-column="63" />
+            <state relative-caret-position="85">
+              <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -56,20 +54,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="updateUI.dart" pinned="false" current-in-tab="true">
+      <file leaf-file-name="updateUI.dart" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/updateUI.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="125" column="49" lean-forward="true" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="49" />
+            <state relative-caret-position="382">
+              <caret line="134" selection-start-line="134" selection-end-line="134" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="input_decorator.dart" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../flutterDEV/flutter/packages/flutter/lib/src/material/input_decorator.dart">
+      <file leaf-file-name="pubspec.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
-              <caret line="1746" column="8" selection-start-line="1746" selection-start-column="8" selection-end-line="1746" selection-end-column="8" />
+            <state relative-caret-position="195">
+              <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -110,11 +108,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lib/threadTest.dart" />
-        <option value="$PROJECT_DIR$/lib/layoutUI.dart" />
         <option value="$PROJECT_DIR$/pubspec.yaml" />
         <option value="$PROJECT_DIR$/lib/animation.dart" />
         <option value="$PROJECT_DIR$/lib/main.dart" />
         <option value="$PROJECT_DIR$/lib/updateUI.dart" />
+        <option value="$PROJECT_DIR$/lib/layoutUI.dart" />
       </list>
     </option>
   </component>
@@ -264,7 +262,7 @@
       <workItem from="1531376667639" duration="122000" />
       <workItem from="1531377135481" duration="48000" />
       <workItem from="1531378787861" duration="429000" />
-      <workItem from="1531382602017" duration="9186000" />
+      <workItem from="1531382602017" duration="12245000" />
     </task>
     <task id="LOCAL-00001" summary="add thread demo&#10;add image demo">
       <created>1531388909829</created>
@@ -280,11 +278,25 @@
       <option name="project" value="LOCAL" />
       <updated>1531447733949</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add textfield demo">
+      <created>1531449156137</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1531449156137</updated>
+    </task>
+    <task id="LOCAL-00004" summary="validate textfiled and show error.">
+      <created>1531449612145</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1531449612145</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24105000" />
+    <option name="totallyTimeSpent" value="27164000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="37" width="1050" height="810" extended-state="0" />
@@ -296,15 +308,15 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50073636" side_tool="true" weight="0.32753623" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Dart Analysis" order="7" weight="0.32781956" />
-      <window_info anchor="right" id="Flutter Outline" order="3" />
+      <window_info anchor="right" id="Flutter Outline" order="3" weight="0.32936507" />
       <window_info anchor="bottom" id="Logcat" order="7" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Designer" order="6" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2495238" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.24900794" />
       <window_info id="Structure" order="2" sideWeight="0.4985507" side_tool="true" weight="0.19333333" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="0" />
-      <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
+      <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" weight="0.32936507" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.3289855" />
@@ -342,7 +354,7 @@
       <window_info anchor="bottom" id="Android Profiler" order="8" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info id="UI Designer" order="0" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50073636" side_tool="true" weight="0.32819074" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50073636" side_tool="true" weight="0.32753623" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2495238" />
       <window_info anchor="right" id="Device File Explorer" order="6" side_tool="true" />
       <window_info anchor="right" id="Flutter Outline" order="7" />
@@ -370,7 +382,9 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="add thread demo&#10;add image demo" />
     <MESSAGE value="add 'update listView dynamic' demo&#10;add gesture demo" />
-    <option name="LAST_COMMIT_MESSAGE" value="add 'update listView dynamic' demo&#10;add gesture demo" />
+    <MESSAGE value="add textfield demo" />
+    <MESSAGE value="validate textfiled and show error." />
+    <option name="LAST_COMMIT_MESSAGE" value="validate textfiled and show error." />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
@@ -569,29 +583,12 @@
     <entry file="file://$PROJECT_DIR$/ios/Runner/AppDelegate.m">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/threadTest.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1098">
           <caret line="61" column="3" lean-forward="true" selection-start-line="61" selection-start-column="3" selection-end-line="61" selection-end-column="3" />
           <folding>
             <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/layoutUI.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="106" column="63" selection-start-line="106" selection-start-column="63" selection-end-line="106" selection-end-column="63" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -613,20 +610,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/updateUI.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="134" selection-start-line="134" selection-end-line="134" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="16" lean-forward="true" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lib/main.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="111" column="6" lean-forward="true" selection-start-line="111" selection-start-column="6" selection-end-line="111" selection-end-column="6" />
+        <state relative-caret-position="282">
+          <caret line="75" column="83" selection-start-line="75" selection-start-column="83" selection-end-line="75" selection-end-column="83" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/updateUI.dart">
+    <entry file="file://$PROJECT_DIR$/lib/layoutUI.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="125" column="49" lean-forward="true" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="49" />
+        <state relative-caret-position="85">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
