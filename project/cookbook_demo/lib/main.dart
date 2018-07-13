@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'basicDesign.dart';
 
 void main() {
   runApp(MainPage());
@@ -12,6 +13,7 @@ class MainPage extends StatelessWidget {
       initialRoute: '/',
       routes: <String, WidgetBuilder> {
         '/': (BuildContext context) => MyMenuPage(),
+        '/snackbar': (BuildContext context) => SnackBarPage(),
       },
       theme: ThemeData(primaryColor: Colors.blue),
     );
@@ -36,7 +38,10 @@ class MyMenuPage extends StatelessWidget {
                 ListTile(
                   title: Text(menus[index]),
                   onTap: (){
-
+                    switch (index) {
+                      case 0:
+                        Navigator.of(context).pushNamed('/snackbar');
+                    }
                   },
                 ),
                 Divider(height: 0.5,)
