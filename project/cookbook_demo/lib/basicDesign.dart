@@ -27,6 +27,34 @@ class SnackBarPage extends StatelessWidget {
   }
 }
 
+
+class TabsViewDemoPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text('Tabs Demo'),
+          bottom: TabBar(tabs: [
+            Tab(icon: Icon(Icons.directions_bike)),
+            Tab(icon: Icon(Icons.directions_car)),
+            Tab(icon: Icon(Icons.directions_transit)),
+          ]),
+        ),
+        body: TabBarView(
+          children: [
+            Icon(Icons.directions_car),
+            Icon(Icons.directions_transit),
+            Icon(Icons.directions_bike),
+          ],
+        ),
+      ),
+
+    );
+  }
+
+}
 class MyDrawerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

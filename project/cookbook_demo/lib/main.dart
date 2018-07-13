@@ -17,6 +17,7 @@ class MainPage extends StatelessWidget {
         '/drawer': (BuildContext context) => MyDrawerPage(),
         '/orientation': (BuildContext context) =>
             OrientationList(title: 'Orientation'),
+        '/tabs': (BuildContext context) => TabsViewDemoPage(),
       },
       theme: ThemeData(primaryColor: Colors.blue),
     );
@@ -38,6 +39,25 @@ class MyMenuPage extends StatelessWidget {
         title: Text('CookBook'),
       ),
       body: ListView.builder(
+          itemBuilder: (context, index) {
+            return Column(
+              children: <Widget>[
+                ListTile(
+                  title: Text(menus[index]),
+                  onTap: (){
+                    switch (index) {
+                      case 0:
+                        Navigator.of(context).pushNamed('/snackbar');
+                        break;
+                      case 1:
+                        Navigator.of(context).pushNamed('/tabs');
+                    }
+                  },
+                ),
+                Divider(height: 0.5,)
+              ],
+            );
+          },
         itemBuilder: (context, index) {
           return Column(
             children: <Widget>[
