@@ -27,6 +27,8 @@ class MainPageState extends State<MainPage> {
     'How do I build custom widgets?',
     'How do I write asynchronous code?',
     'How do I include image assets for Flutter?',
+    'How do I update ListViews dynamically?',
+    'How do I handle other gestures on widgets?',
   ];
 
   @override
@@ -88,6 +90,14 @@ class MainPageState extends State<MainPage> {
               case 6:
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => ImageTestPage()));
+                break;
+              case 7:
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (context) => UpdateListUIPage()));
+                break;
+              case 8:
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => GestureTestPage()));
                 break;
             }
           },

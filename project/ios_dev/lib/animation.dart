@@ -64,3 +64,54 @@ class FadeTestPageState extends State<FadeTestPage> with TickerProviderStateMixi
 
 
 }
+
+class GestureTestPage extends StatefulWidget {
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _GestureTestPageState();
+  }
+
+
+}
+
+class _GestureTestPageState extends State<GestureTestPage>
+    with TickerProviderStateMixin {
+
+  AnimationController controller;
+  CurvedAnimation animation;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 2000));
+    animation = CurvedAnimation(parent: controller, curve: Curves.easeInOut);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Add Gusture Demo'),),
+      body: Center(
+        child: GestureDetector(
+          child: RotationTransition(
+            turns: animation,
+            child: FlutterLogo(
+              size: 150.0,
+            ),
+          ),
+          onDoubleTap: () {
+            if (controller.isCompleted) {
+              controller.reverse();
+            } else {
+              controller.forward();
+            }
+          },
+        ),
+      ),
+    );
+  }
+
+}
