@@ -97,3 +97,52 @@ class _UpdateListUIPageState extends State<UpdateListUIPage> {
   }
 }
 
+class MyFormTestPage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MyFormTestPageState();
+  }
+
+
+}
+
+class _MyFormTestPageState extends State<MyFormTestPage> {
+
+  final textController = TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Form Demo'),),
+      body: Padding(
+        padding: const EdgeInsets.all(10.0),
+        child: TextField(
+          controller: textController,
+          decoration: InputDecoration(hintText: 'Please input something.',
+              labelText: 'This is placeholder'
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          return showDialog(
+              context: context,
+              builder: (context) {
+                return AlertDialog(content: Text(textController.text),);
+              }
+          );
+        },
+        tooltip: 'Show me the Value',
+        child: Icon(Icons.text_fields),
+      ),
+    );
+  }
+
+  @override
+  void dispose() {
+    textController.dispose();
+    super.dispose();
+  }
+
+}
+

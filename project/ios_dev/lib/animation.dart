@@ -114,4 +114,11 @@ class _GestureTestPageState extends State<GestureTestPage>
     );
   }
 
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    controller.dispose();
+    super.dispose();
+  }
+
 }

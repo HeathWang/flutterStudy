@@ -29,6 +29,7 @@ class MainPageState extends State<MainPage> {
     'How do I include image assets for Flutter?',
     'How do I update ListViews dynamically?',
     'How do I handle other gestures on widgets?',
+    'How do forms work in Flutter?',
   ];
 
   @override
@@ -98,6 +99,10 @@ class MainPageState extends State<MainPage> {
               case 8:
                 Navigator.of(context).push(
                     MaterialPageRoute(builder: (context) => GestureTestPage()));
+                break;
+              case 9:
+                Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => MyFormTestPage()));
                 break;
             }
           },
