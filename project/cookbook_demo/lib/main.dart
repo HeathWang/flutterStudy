@@ -15,6 +15,8 @@ class MainPage extends StatelessWidget {
         '/': (BuildContext context) => MyMenuPage(),
         '/snackbar': (BuildContext context) => SnackBarPage(),
         '/drawer': (BuildContext context) => MyDrawerPage(),
+        '/orientation': (BuildContext context) =>
+            OrientationList(title: 'Orientation'),
       },
       theme: ThemeData(primaryColor: Colors.blue),
     );
@@ -26,6 +28,7 @@ class MyMenuPage extends StatelessWidget {
     'Displaying SnackBars',
     'Working with Tabs',
     'Add a Drawer to a screen',
+    'Updating the UI based on orientation',
   ];
 
   @override
@@ -47,6 +50,9 @@ class MyMenuPage extends StatelessWidget {
                       break;
                     case 2:
                       Navigator.of(context).pushNamed('/drawer');
+                      break;
+                    case 3:
+                      Navigator.of(context).pushNamed('/orientation');
                   }
                 },
               ),
