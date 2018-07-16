@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'basicDesign.dart';
+import 'listDemo.dart';
 
 void main() {
   runApp(MainPage());
@@ -20,7 +21,7 @@ class MainPage extends StatelessWidget {
             OrientationList(title: 'Orientation'),
         '/fadeImage': (BuildContext content) => MyFadeImagePage(),
         '/cacheImage': (BuildContext context) => CacheImageDemo(),
-
+        '/horizontalList': (BuildContext context) => HorizontalListPage(),
       },
       theme: ThemeData(primaryColor: Colors.blue),
     );
@@ -35,6 +36,7 @@ class MyMenuPage extends StatelessWidget {
     'Updating the UI based on orientation',
     'Fade in images with a placeholder',
     'Working with cached images',
+    'Create a horizontal list',
   ];
 
   @override
@@ -68,6 +70,9 @@ class MyMenuPage extends StatelessWidget {
                       break;
                     case 5:
                       Navigator.of(context).pushNamed('/cacheImage');
+                      break;
+                    case 6:
+                      Navigator.of(context).pushNamed('/horizontalList');
                   }
                 },
               ),
