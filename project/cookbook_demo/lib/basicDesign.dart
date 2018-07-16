@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 class SnackBarPage extends StatelessWidget {
   @override
@@ -116,4 +117,25 @@ class OrientationList extends StatelessWidget {
       ),
     );
   }
+}
+
+class MyFadeImagePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Image Placeholder'),),
+      body: Stack(
+        children: <Widget>[
+          Center(child: CircularProgressIndicator()),
+          Center(
+            child: FadeInImage.memoryNetwork(
+                placeholder: kTransparentImage,
+                image: 'https://github.com/flutter/website/blob/master/_includes/code/layout/lakes/images/lake.jpg?raw=true'
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
 }
