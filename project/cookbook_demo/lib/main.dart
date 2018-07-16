@@ -19,6 +19,7 @@ class MainPage extends StatelessWidget {
         '/orientation': (BuildContext context) =>
             OrientationList(title: 'Orientation'),
         '/fadeImage': (BuildContext content) => MyFadeImagePage(),
+        '/cacheImage': (BuildContext context) => CacheImageDemo(),
 
       },
       theme: ThemeData(primaryColor: Colors.blue),
@@ -33,6 +34,7 @@ class MyMenuPage extends StatelessWidget {
     'Add a Drawer to a screen',
     'Updating the UI based on orientation',
     'Fade in images with a placeholder',
+    'Working with cached images',
   ];
 
   @override
@@ -63,6 +65,9 @@ class MyMenuPage extends StatelessWidget {
                       break;
                     case 4:
                       Navigator.of(context).pushNamed('/fadeImage');
+                      break;
+                    case 5:
+                      Navigator.of(context).pushNamed('/cacheImage');
                   }
                 },
               ),

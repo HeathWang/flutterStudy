@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:transparent_image/transparent_image.dart';
+import 'package:cached_network_image/cached_network_image.dart';
 
 class SnackBarPage extends StatelessWidget {
   @override
@@ -135,6 +136,23 @@ class MyFadeImagePage extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+
+}
+
+class CacheImageDemo extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Cache Image'),),
+      body: Center(
+        child: CachedNetworkImage(
+          imageUrl: 'https://pic4.zhimg.com/50/v2-751916a21b95efa0da2b819dcc257c4c_hd.jpg',
+          placeholder: CircularProgressIndicator(),
+        ),
+      ),
+
     );
   }
 
