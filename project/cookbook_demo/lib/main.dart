@@ -22,6 +22,16 @@ class MainPage extends StatelessWidget {
         '/fadeImage': (BuildContext content) => MyFadeImagePage(),
         '/cacheImage': (BuildContext context) => CacheImageDemo(),
         '/horizontalList': (BuildContext context) => HorizontalListPage(),
+        '/diffCells': (BuildContext context) =>
+            DifferentCellPage(list: List.generate(1000, (i) {
+              if (i % 8 == 0) {
+                int index = i ~/ 8;
+                return HeadingItem('Heading $index');
+              } else {
+                return MessageItem('Sender $i', 'Body $i');
+              }
+            })),
+        '/navAnimation': (BuildContext context) => FirstPage(),
       },
       theme: ThemeData(primaryColor: Colors.blue),
     );
@@ -37,6 +47,8 @@ class MyMenuPage extends StatelessWidget {
     'Fade in images with a placeholder',
     'Working with cached images',
     'Create a horizontal list',
+    'Creating lists with different types of items',
+    'Animating a Widget across screens',
   ];
 
   @override
@@ -73,6 +85,12 @@ class MyMenuPage extends StatelessWidget {
                       break;
                     case 6:
                       Navigator.of(context).pushNamed('/horizontalList');
+                      break;
+                    case 7:
+                      Navigator.of(context).pushNamed('/diffCells');
+                      break;
+                    case 8:
+                      Navigator.of(context).pushNamed('/navAnimation');
                   }
                 },
               ),

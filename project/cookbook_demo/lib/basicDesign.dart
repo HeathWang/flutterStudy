@@ -157,3 +157,48 @@ class CacheImageDemo extends StatelessWidget {
   }
 
 }
+
+class FirstPage extends StatelessWidget {
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('First Page')),
+      body: Container(
+        child: GestureDetector(
+          child: Hero(
+            tag: 'imageHero',
+            child: Image.network(
+                'https://pic4.zhimg.com/v2-8a38d71f786375a28fc0c2cea2bb2fee_b.jpg'),
+          ),
+          onTap: () {
+            Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => SecondPage()));
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class SecondPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Hero(
+          tag: 'imageHero',
+          child: GestureDetector(
+            child: Image.network(
+                'https://pic4.zhimg.com/v2-8a38d71f786375a28fc0c2cea2bb2fee_b.jpg'),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
+      ),
+    );
+  }
+
+}

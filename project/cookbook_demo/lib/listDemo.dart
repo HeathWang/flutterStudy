@@ -25,3 +25,63 @@ class HorizontalListPage extends StatelessWidget {
     );
   }
 }
+
+abstract class ListItem {}
+
+class HeadingItem extends ListItem {
+  final String heading;
+
+  HeadingItem(this.heading);
+
+}
+
+class MessageItem extends ListItem {
+  final String sender;
+  final String body;
+
+  MessageItem(this.sender, this.body);
+}
+
+class DifferentCellPage extends StatelessWidget {
+
+  final List<ListItem> list;
+
+  DifferentCellPage({Key key, @required this.list}) : super(key: key);
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Different type cell')),
+      body: ListView.builder(
+        itemBuilder: (context, i) {
+          final item = list[i];
+
+          if (item is HeadingItem) {
+            return Column(
+              children: <Widget>[
+                ListTile(
+                  title: Text(
+                    item.heading,
+                    style: Theme
+                        .of(context)
+                        .textTheme
+                        .headline,
+                  ),
+                ),
+                Divider(height: 0.5)
+              ],
+            );
+          } else if (item is MessageItem) {
+            return ListTile(
+              title: Text(item.sender),
+              subtitle: Text(item.body),
+            );
+          }
+        },
+        itemCount: list.length,
+      ),
+    );
+  }
+
+}
