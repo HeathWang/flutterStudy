@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'basicDesign.dart';
 import 'listDemo.dart';
 import 'httpDemo.dart';
+import 'persistence.dart';
 
 void main() {
   runApp(MainPage());
@@ -53,6 +54,7 @@ class MyMenuPage extends StatelessWidget {
     'Animating a Widget across screens',
     'Fetch data from the internet',
     'Parsing JSON in the background',
+    'Storing key-value data on disk'
   ];
 
   @override
@@ -104,6 +106,10 @@ class MyMenuPage extends StatelessWidget {
                           MaterialPageRoute(builder: (context) {
                             return ParseJsonBackgroundPage();
                           }));
+                      break;
+                    case 11:
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => PersistenceDemoPage()));
                   }
                 },
               ),
