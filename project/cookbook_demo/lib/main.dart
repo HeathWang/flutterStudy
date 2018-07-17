@@ -52,6 +52,7 @@ class MyMenuPage extends StatelessWidget {
     'Creating lists with different types of items',
     'Animating a Widget across screens',
     'Fetch data from the internet',
+    'Parsing JSON in the background',
   ];
 
   @override
@@ -97,6 +98,12 @@ class MyMenuPage extends StatelessWidget {
                       break;
                     case 9:
                       Navigator.of(context).pushNamed('/fetchData');
+                      break;
+                    case 10:
+                      Navigator.of(context).push(
+                          MaterialPageRoute(builder: (context) {
+                            return ParseJsonBackgroundPage();
+                          }));
                   }
                 },
               ),
