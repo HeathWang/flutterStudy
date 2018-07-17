@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'basicDesign.dart';
 import 'listDemo.dart';
+import 'httpDemo.dart';
 
 void main() {
   runApp(MainPage());
@@ -32,6 +33,7 @@ class MainPage extends StatelessWidget {
               }
             })),
         '/navAnimation': (BuildContext context) => FirstPage(),
+        '/fetchData': (BuildContext context) => FetchDataPage(),
       },
       theme: ThemeData(primaryColor: Colors.blue),
     );
@@ -49,6 +51,7 @@ class MyMenuPage extends StatelessWidget {
     'Create a horizontal list',
     'Creating lists with different types of items',
     'Animating a Widget across screens',
+    'Fetch data from the internet',
   ];
 
   @override
@@ -91,6 +94,9 @@ class MyMenuPage extends StatelessWidget {
                       break;
                     case 8:
                       Navigator.of(context).pushNamed('/navAnimation');
+                      break;
+                    case 9:
+                      Navigator.of(context).pushNamed('/fetchData');
                   }
                 },
               ),
