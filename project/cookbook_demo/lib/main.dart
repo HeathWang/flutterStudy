@@ -35,6 +35,8 @@ class MainPage extends StatelessWidget {
             })),
         '/navAnimation': (BuildContext context) => FirstPage(),
         '/fetchData': (BuildContext context) => FetchDataPage(),
+        '/changeTextField': (BuildContext context) => TextFieldListenerDemo(),
+        '/focusTextField': (BuildContext context) => FocusTextFieldDemo(),
       },
       theme: ThemeData(primaryColor: Colors.blue),
     );
@@ -54,7 +56,9 @@ class MyMenuPage extends StatelessWidget {
     'Animating a Widget across screens',
     'Fetch data from the internet',
     'Parsing JSON in the background',
-    'Storing key-value data on disk'
+    'Storing key-value data on disk',
+    'Handling changes to a text field',
+    'Focus on a Text Field',
   ];
 
   @override
@@ -110,6 +114,12 @@ class MyMenuPage extends StatelessWidget {
                     case 11:
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => PersistenceDemoPage()));
+                      break;
+                    case 12:
+                      Navigator.of(context).pushNamed('/changeTextField');
+                      break;
+                    case 13:
+                      Navigator.of(context).pushNamed('/focusTextField');
                   }
                 },
               ),

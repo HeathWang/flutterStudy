@@ -202,3 +202,103 @@ class SecondPage extends StatelessWidget {
   }
 
 }
+
+class TextFieldListenerDemo extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _TextFieldListenerDemoState();
+  }
+
+
+}
+
+class _TextFieldListenerDemoState extends State<TextFieldListenerDemo> {
+
+  final textController = TextEditingController();
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    textController.addListener(_listenTextField);
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    textController.removeListener(_listenTextField);
+    textController.dispose();
+    super.dispose();
+  }
+
+  void _listenTextField() {
+    print('TextField text: ${textController.text}');
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Handling changes to a text field')),
+      body: Center(
+        child: TextField(
+          controller: textController,
+        ),
+      ),
+    );
+  }
+
+}
+
+class FocusTextFieldDemo extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _FocusTextFieldDemoState();
+  }
+
+}
+
+class _FocusTextFieldDemoState extends State<FocusTextFieldDemo> {
+
+  final focusNode = FocusNode();
+
+  @override
+  void dispose() {
+    // TODO: implement dispose
+    focusNode.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Focus TextField'),),
+      body: Padding(
+        padding: EdgeInsets.all(20.0),
+        child: Column(
+          children: <Widget>[
+            TextField(
+              autofocus: true,
+              decoration: InputDecoration(
+                  labelText: 'auto focus'
+              ),
+            ),
+            TextField(
+              focusNode: focusNode,
+              decoration: InputDecoration(
+                  labelText: 'focus node'
+              ),
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          FocusScope.of(context).requestFocus(focusNode);
+        },
+        child: Icon(Icons.directions),
+      ),
+    );
+  }
+
+}
+
