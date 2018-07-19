@@ -37,6 +37,7 @@ class MainPage extends StatelessWidget {
         '/fetchData': (BuildContext context) => FetchDataPage(),
         '/changeTextField': (BuildContext context) => TextFieldListenerDemo(),
         '/focusTextField': (BuildContext context) => FocusTextFieldDemo(),
+        '/validateForm': (BuildContext context) => MyCustomForm(),
       },
       theme: ThemeData(primaryColor: Colors.blue),
     );
@@ -59,6 +60,7 @@ class MyMenuPage extends StatelessWidget {
     'Storing key-value data on disk',
     'Handling changes to a text field',
     'Focus on a Text Field',
+    'Building a form with validation'
   ];
 
   @override
@@ -120,6 +122,10 @@ class MyMenuPage extends StatelessWidget {
                       break;
                     case 13:
                       Navigator.of(context).pushNamed('/focusTextField');
+                      break;
+                    case 14:
+                      Navigator.of(context).pushNamed('/validateForm');
+                      break;
                   }
                 },
               ),

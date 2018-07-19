@@ -302,3 +302,54 @@ class _FocusTextFieldDemoState extends State<FocusTextFieldDemo> {
 
 }
 
+class MyCustomForm extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _MyCustomFormState();
+  }
+
+}
+
+class _MyCustomFormState extends State<MyCustomForm> {
+
+  final _formKey = GlobalKey<FormState>();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Validate Form'),),
+      body: Form(
+        key: _formKey,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            TextFormField(
+              validator: (value) {
+                if (value.isEmpty) {
+                  return 'Please enter something.';
+                }
+              },
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(vertical: 16.0),
+              child: Builder(builder: (context) {
+                return RaisedButton(
+                  onPressed: () {
+                    if (_formKey.currentState.validate()) {
+                      Scaffold.of(context).showSnackBar(
+                          SnackBar(content: Text('Processing Data')));
+                    }
+                  },
+                  child: Text('Submit'),
+                );
+              }),
+
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+}
+
