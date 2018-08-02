@@ -168,12 +168,12 @@ class _FilterMainPageState extends State<FilterMainPage> {
     return Positioned(
       top: _imageHeight - 100,
       right: -40.0,
-      child: AnimatedFab(onClick: changeFilterState,),
+      child: AnimatedFab(onClick: _changeFilterState,),
     );
   }
 
-  void changeFilterState() {
-    print('do it!!!');
+  _changeFilterState() {
+
     showOnlyCompleted = !showOnlyCompleted;
     tasks.where((task) => !task.completed).forEach((task) {
       if (showOnlyCompleted) {

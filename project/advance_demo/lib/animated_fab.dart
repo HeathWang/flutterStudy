@@ -4,7 +4,7 @@ import 'dart:math' as math;
 class AnimatedFab extends StatefulWidget {
 
   final VoidCallback onClick;
-  AnimatedFab({Key key, this.onClick}) : super(key: key);
+  const AnimatedFab({Key key, this.onClick}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() {
@@ -124,7 +124,6 @@ class _AnimatedFabState extends State<AnimatedFab> with SingleTickerProviderStat
   }
 
   _onFabTap() {
-    print('tap float button ${widget.onClick}');
     if (animationController.isDismissed) {
       open();
     } else {
@@ -133,7 +132,7 @@ class _AnimatedFabState extends State<AnimatedFab> with SingleTickerProviderStat
   }
 
   _onIconClick() {
-    widget.onClick;
+    widget.onClick();
     close();
   }
 
