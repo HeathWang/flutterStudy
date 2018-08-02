@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:advance_demo/task.dart';
 import 'package:advance_demo/task_row.dart';
+import 'package:advance_demo/list_model.dart';
+import 'package:advance_demo/animated_fab.dart';
 
 class FilterMainPage extends StatefulWidget {
   @override
@@ -12,7 +14,10 @@ class FilterMainPage extends StatefulWidget {
 
 class _FilterMainPageState extends State<FilterMainPage> {
 
+  final GlobalKey<AnimatedListState> _listKey = GlobalKey<AnimatedListState>();
   double _imageHeight = 256.0;
+  ListModel listModel;
+  bool showOnlyCompleted = false;
 
   @override
   Widget build(BuildContext context) {
@@ -23,10 +28,17 @@ class _FilterMainPageState extends State<FilterMainPage> {
           _buildImage(),
           _buildTopHeader(),
           _buildProfileRow(),
-          _buildBottomPart()
+          _buildBottomPart(),
+          _buildFab(),
         ],
       ),
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    listModel = ListModel(_listKey, tasks);
   }
 
   Widget _buildImage() {
@@ -130,8 +142,12 @@ class _FilterMainPageState extends State<FilterMainPage> {
 
   Widget _buildTasksList() {
     return Expanded(
-      child: ListView(
-        children: task.map((task) => TaskRow(task:task)).toList(),
+      child: AnimatedList(
+          itemBuilder: (context, index, animation) {
+            return TaskRow(task: listModel[index], animation: animation,);
+          },
+        initialItemCount: tasks.length,
+        key: _listKey,
       ),
     );
   }
@@ -146,6 +162,26 @@ class _FilterMainPageState extends State<FilterMainPage> {
         color: Colors.grey[300],
       ),
     );
+  }
+
+  Widget _buildFab() {
+    return Positioned(
+      top: _imageHeight - 100,
+      right: -40.0,
+      child: AnimatedFab(onClick: changeFilterState,),
+    );
+  }
+
+  void changeFilterState() {
+    print('do it!!!');
+    showOnlyCompleted = !showOnlyCompleted;
+    tasks.where((task) => !task.completed).forEach((task) {
+      if (showOnlyCompleted) {
+        listModel.removeAt(listModel.indexOf(task));
+      } else {
+        listModel.insert(tasks.indexOf(task), task);
+      }
+    });
   }
 
 }

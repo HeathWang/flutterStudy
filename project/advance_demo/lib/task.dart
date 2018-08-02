@@ -10,7 +10,7 @@ class Task {
   Task({this.name, this.category, this.time, this.color, this.completed});
 }
 
-List<Task> task = [
+List<Task> tasks = [
   Task(
       name: "Catch up with Brian",
       category: "Mobile Project",
