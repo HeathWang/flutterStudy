@@ -26,7 +26,7 @@ class _FilterMainPageState extends State<FilterMainPage> {
         children: <Widget>[
           _buildTimeline(),
           _buildImage(),
-          _buildTopHeader(),
+          _buildTopHeader(context),
           _buildProfileRow(),
           _buildBottomPart(),
           _buildFab(),
@@ -55,12 +55,14 @@ class _FilterMainPageState extends State<FilterMainPage> {
       ),);
   }
 
-  Widget _buildTopHeader() {
+  Widget _buildTopHeader(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 32.0),
+      padding: EdgeInsets.symmetric(horizontal: 8.0, vertical: 20.0),
       child: Row(
         children: <Widget>[
-          Icon(Icons.menu, size: 32.0, color: Colors.white,),
+          IconButton(icon: Icon(Icons.arrow_back, size: 32.0, color: Colors.white,), onPressed: () {
+            Navigator.of(context).pop();
+          }),
           Expanded(
             child: Padding(
                 padding: EdgeInsets.only(left: 8.0),
