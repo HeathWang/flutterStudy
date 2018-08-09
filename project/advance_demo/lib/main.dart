@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'sliver_page.dart';
 import 'filter_menu.dart';
+import 'package:advance_demo/flight/flight_main.dart';
 
 void main() => runApp(MyHomeList());
 
@@ -8,7 +9,8 @@ void main() => runApp(MyHomeList());
 class MyHomeList extends StatelessWidget {
 
   final demos = ['DYNAMIC SLIVER FLOATINGACTIONBUTTON',
-  'FILTER MENU – UI CHALLENGE'];
+  'FILTER MENU – UI CHALLENGE',
+  'UI CHALLENGE – FLIGHT SEARCH'];
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +19,10 @@ class MyHomeList extends StatelessWidget {
       routes: <String, WidgetBuilder> {
         '/sliver': (_) => MyHomePage(),
         '/ui_challenge': (_) => FilterMainPage(),
+        '/flight': (_) => FlightMainPage(),
 
       },
+      theme: ThemeData(primarySwatch: Colors.red),
       home: Scaffold(
         appBar: AppBar(title: Text('Home'),),
         body: ListView.builder(
@@ -50,6 +54,9 @@ class MyHomeList extends StatelessWidget {
         break;
       case 1:
         Navigator.of(context).pushNamed('/ui_challenge');
+        break;
+      case 2:
+        Navigator.of(context).pushNamed('/flight');
 
     }
   }
