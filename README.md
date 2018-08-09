@@ -7,7 +7,7 @@
 
 
 #### fluter介绍
-[flutter介绍](https://github.com/HeathWang/flutterStudy/blob/master/flutter介绍.md)
-简单的介绍，基本环境配置，IDE安装。
-[Dart基类Object说明](https://github.com/HeathWang/flutterStudy/blob/master/dart%20root%20class%20Object%20介绍.md)
+[flutter介绍](https://github.com/HeathWang/flutterStudy/blob/master/flutter介绍.md)简单的介绍，基本环境配置，IDE安装。
+
+[Dart基类Object说明](https://github.com/HeathWang/flutterStudy/blob/master/dart%20root%20class%20Object%20介绍.md)如何继承以及重写基类方法
 
