@@ -6,7 +6,7 @@
 * [awesome-flutter](https://github.com/Solido/awesome-flutter) 学习指南，轮子，示例都可以在这里找到。
 
 #### 示例demo
-个人学习练手用项目
+个人学习练手用项目(project文件夹)
 
 * ios_dev 从事iOS开发人员如何学习使用flutter。
 * cookbook_demo flutter官方的一些学习示例
