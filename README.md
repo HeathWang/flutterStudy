@@ -4,6 +4,7 @@
 * [flutter官方网站](https://flutter.io)，基础教程，文档都可以在这里找到。
 * [flutter中文网](https://flutterchina.club) 当然，最新的还是去官网。
 * [awesome-flutter](https://github.com/Solido/awesome-flutter) 学习指南，轮子，示例都可以在这里找到。
+* [开源flutter APP](https://itsallwidgets.com)
 
 #### 示例demo
 个人学习练手用项目(project文件夹)
