@@ -13,7 +13,7 @@ When you define a class, you should override toString to return a string describ
 
 #### 创建一个user对象
 
-```dart
+```
 class User {
   String id;
   String username;
@@ -29,7 +29,7 @@ class User {
 
 ##### hashCode方法
 
-```dart
+```
 @override
   int get hashCode => id.hashCode ^ username.hashCode ^ birthday.hashCode ^ sex.hashCode;
 ```
@@ -38,7 +38,7 @@ hasCode用来判断2个对象是否相同。
 
 ##### toString方法
 
-```dart
+```
   @override
   String toString() {
     return 'User{id:$id, username:$username, birthday:$birthday, sex:$sex}';
@@ -48,7 +48,7 @@ toString方法类似于iOS中的description方法，用于描述对象。
 
 ##### operator ==方法
 
-```dart
+```
   @override
   bool operator ==(other) {
     return identical(this, other) ||

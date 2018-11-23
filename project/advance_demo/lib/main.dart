@@ -22,7 +22,7 @@ class MyHomeList extends StatelessWidget {
         '/flight': (_) => FlightMainPage(),
 
       },
-      theme: ThemeData(primarySwatch: Colors.red),
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: Scaffold(
         appBar: AppBar(title: Text('Home'),),
         body: ListView.builder(

@@ -121,6 +121,110 @@ flutter可以使用Android Studio, IntelliJ, or VS Code来编写。
 3. 选择 Browse repositories…, 选择 Flutter 插件并点击 install。
 4. 重启Android Studio
 
+### flutter创建项目
+
+## flutter 组件
+flutter中UI组件都是集成自widget。
+widget有可变和可不变2种：
+* `StatefulWidget` and State, for widgets that can build differently several times over their lifetime.
+* `StatelessWidget`, for widgets that always build the same way given a particular configuration and ambient state.
+
+一般来说我们会继承`extends`以上2个类来编写自定义组件。
+
+## StatelessWidget
+
+```Dart
+class GreenFrog extends StatelessWidget {
+  const GreenFrog({ Key key }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return new Container(color: const Color(0xFF2DBD3A));
+  }
+}
+```
+
+Normally widgets have more constructor arguments, each of which corresponds to a final property. The next example shows the more generic widget Frog which can be given a color and a child:
+
+
+```Dart
+class Frog extends StatelessWidget {
+  const Frog({
+    Key key,
+    this.color: const Color(0xFF2DBD3A),
+    this.child,
+  }) : super(key: key);
+
+  final Color color;
+
+  final Widget child;
+
+  @override
+  Widget build(BuildContext context) {
+    return new Container(color: color, child: child);
+  }
+}
+```
+因为不可变的特性，所以初始化参数传入时，对应的属性应该加上`final`。
+
+## StatefulWidget
+可变的UI组件。具体实现上比不可变widget复杂一点。
+
+```Dart
+class YellowBird extends StatefulWidget {
+  const YellowBird({ Key key }) : super(key: key);
+
+  @override
+  _YellowBirdState createState() => new _YellowBirdState();
+}
+
+class _YellowBirdState extends State<YellowBird> {
+  @override
+  Widget build(BuildContext context) {
+    return new Container(color: const Color(0xFFFFE306));
+  }
+}
+```
+以上YellowBird继承自StatefulWidget，重写了createState方法，返回一个State类。
+State用于管理该widget中state变化。具体核心代码，UI组织存在于State类的具体实现中。
+
+The next example shows the more generic widget Bird which can be given a color and a child, and which has some internal state with a method that can be called to mutate it:
+
+```Dart
+class Bird extends StatefulWidget {
+  const Bird({
+    Key key,
+    this.color: const Color(0xFFFFE306),
+    this.child,
+  }) : super(key: key);
+
+  final Color color;
+
+  final Widget child;
+
+  _BirdState createState() => new _BirdState();
+}
+
+class _BirdState extends State<Bird> {
+  double _size = 1.0;
+
+  void grow() {
+    setState(() { _size += 0.1; });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      color: widget.color,
+      transform: new Matrix4.diagonal3Values(_size, _size, 1.0),
+      child: widget.child,
+    );
+  }
+}
+```
+状态的变更，通过setState方法
+这点和wx小程序类似（setData）。
+
 
 
 
