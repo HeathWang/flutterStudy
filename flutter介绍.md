@@ -226,6 +226,3 @@ class _BirdState extends State<Bird> {
 这点和wx小程序类似（setData）。
 
 
-
-
-
