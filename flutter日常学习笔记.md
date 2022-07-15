@@ -56,4 +56,6 @@ Expanded的主要作用是用于填充父组件（Row，Column，Flex）的“�
 一个Expanded组件***必须***是*Row*，*Column*，*Flex*的子widget，并且Expanded的child必须是 StatelessWidgets or StatefulWidgets。
 一个最常用的场景是Expanded包裹Text组件，以为Text组件因文字不同，大小不确定。
 
+## here I will add some text to make something.
+
 
