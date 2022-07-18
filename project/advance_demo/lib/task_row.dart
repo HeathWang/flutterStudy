@@ -42,6 +42,16 @@ class TaskRow extends StatelessWidget {
                 child: Text(task.time,
                   style: TextStyle(fontSize: 12.0, color: Colors.grey),),
               ),
+              Padding(
+                padding: EdgeInsets.only(right: 16.0),
+                child: Text(task.time,
+                  style: TextStyle(fontSize: 12.0, color: Colors.grey),),
+              ),
+              Padding(
+                padding: EdgeInsets.only(right: 16.0),
+                child: Text(task.time,
+                  style: TextStyle(fontSize: 12.0, color: Colors.grey),),
+              ),
             ],
           ),
         ),
